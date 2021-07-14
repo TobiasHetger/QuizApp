@@ -25,7 +25,7 @@ class Questioncatalog {
     );
 
     final question_four = Question(
-      text: "Wer hat die meisten Tore für Deutschland gechossen",
+      text: "Wer hat die meisten Tore für Deutschland geschossen",
       category: "Fußball",
       headline: "Deutsche Fúßballgeschichte",
       answer: Answer(

@@ -85,7 +85,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
               Container(
-                color: Colors.blue.shade400,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.red,
+                      blurRadius: 25,
+                      spreadRadius: 5,
+                      offset: Offset(
+                        15,
+                        15,
+                      ),
+                    ),
+                  ],
+                  color: Colors.blue.shade400,
+                ),
                 height: 160,
                 child: Center(
                   child: Text(
@@ -111,16 +124,29 @@ class _MyHomePageState extends State<MyHomePage> {
                         }
                       },
                       child: Container(
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.red,
+                              blurRadius: 25,
+                              spreadRadius: 5,
+                              offset: Offset(
+                                15,
+                                15,
+                              ),
+                            ),
+                          ],
+                          color: selected != null &&
+                                  e == getQuestion().answer.first
+                              ? Colors.green
+                              : getQuestion().answer.first != selected &&
+                                      e == selected
+                                  ? Colors.red
+                                  : Colors.blueGrey,
+                        ),
                         height: 100,
                         alignment: Alignment.center,
                         width: 200,
-                        color:
-                            selected != null && e == getQuestion().answer.first
-                                ? Colors.green
-                                : getQuestion().answer.first != selected &&
-                                        e == selected
-                                    ? Colors.red
-                                    : Colors.blueGrey,
                         child: Text(
                           e,
                           style: TextStyle(fontSize: 30),
